@@ -1,8 +1,8 @@
 class main:
     def __init__(self):
-        print('Main class initialized')
+        pass
     
-    def print(message):
+    def print(self, message):
         print(message)
 
 obj = main()
