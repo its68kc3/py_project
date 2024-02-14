@@ -7,3 +7,5 @@ class test:
 
 x = test('Hello, world! :)')
 x.printmessage()
+
+# test comment :D
