@@ -1,7 +1,10 @@
+import process, time
+
 class main:
     def __init__(self):
         pass
     
+    @process.getExecTime
     def print(self, message):
         print(message)
 
