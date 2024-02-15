@@ -2,19 +2,17 @@ class testLainecakes:
     def classFunc(self):
         print(self)
 
-def outerFunction(func1):
+def decoration(func1):
     print('Executed from outer function')
-    def innerFunction():
+    def wrapper(*args, **kwargs):
                 print('Executed from inner function')
                 print('Pre execution of function')
-                func1()
+                func1(*args, **kwargs)
                 print('Post execution of function')
-    return innerFunction
+    return wrapper
 
-@outerFunction
-def printHelloWorld():
-    print('Hello, world! :)')
+@decoration
+def printSomething(message):
+    print(message)
 
-printHelloWorld()
-x = testLainecakes()
-x.classFunc()
+printSomething(message='Hello Lainecakes Pwetcakes')
