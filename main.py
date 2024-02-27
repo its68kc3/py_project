@@ -6,6 +6,7 @@ class main:
     
     @process.getExecTime
     def print(self, message):
+        time.sleep(1.5)
         print(message)
 
 obj = main()
