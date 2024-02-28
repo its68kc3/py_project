@@ -5,14 +5,17 @@ class Node:
 
 class LinkedList:
     def __init__(self):
-        self.head = Node('Head')
+        self.head = None
 
-    def add(self, value=None):
+    def add(self, value):
         newNode = Node(value)
         cur = self.head
-        while cur.next != None:
-            cur = cur.next
-        cur.next = newNode
+        if(cur is None):
+            self.head = newNode
+        else:
+            while cur.next != None:
+                cur = cur.next
+            cur.next = newNode
 
     def showLinkedList(self):
         cur = self.head
