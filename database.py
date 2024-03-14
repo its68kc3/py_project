@@ -6,3 +6,6 @@ class database:
 
     def execute(self):
         pass
+
+    def result(self):
+        pass
