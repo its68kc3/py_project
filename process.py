@@ -8,6 +8,7 @@ def getExecTime(func1):
                 _timeExecuted = time.time()
                 func1(*args, **kwargs)
                 _executionTime = time.time() - _timeExecuted
+                _executionTime = round(_executionTime, 2)
                 print(_executionTime)
     return wrapper
 
