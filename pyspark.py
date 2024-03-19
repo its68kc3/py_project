@@ -1,4 +1,6 @@
 import pyspark
-import pandas
+import pandas as pd
+import matplotlib.pyplot as plt
 
-pandas.read_csv('customers-100.csv')
+dataset = pd.read_csv('customers-100.csv')
+print(dataset.to_string())
